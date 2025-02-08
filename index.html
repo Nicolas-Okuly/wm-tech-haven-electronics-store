@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Haven - Electronics Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <h1>Tech Haven</h1>
+            <p>Your One-Stop Electronics Shop</p>
+        </div>
+    </header>
+
+
+    <main class="container">
+        <aside class="filters">
+            <div class="filter-section">
+                <h3>Filters</h3>
+               
+                <div class="filter-group">
+                    <label>Category:</label>
+                    <select id="categorySelect">
+                        <option value="">All Categories</option>
+                        <option value="Laptops">Laptops</option>
+                        <option value="Smartphones">Smartphones</option>
+                        <option value="Audio">Audio</option>
+                        <option value="Gaming">Gaming</option>
+                        <option value="Accessories">Accessories</option>
+                    </select>
+                </div>
+
+
+                <div class="filter-group">
+                    <label>Brand:</label>
+                    <select id="brandSelect">
+                        <option value="">All Brands</option>
+                        <option value="Apple">Apple</option>
+                        <option value="Samsung">Samsung</option>
+                        <option value="Sony">Sony</option>
+                        <option value="Dell">Dell</option>
+                        <option value="Logitech">Logitech</option>
+                    </select>
+                </div>
+
+
+                <div class="filter-group">
+                    <label>Sort By:</label>
+                    <select id="sortSelect">
+                        <option value="featured">Featured</option>
+                        <option value="priceLow">Price: Low to High</option>
+                        <option value="priceHigh">Price: High to Low</option>
+                        <option value="rating">Best Rating</option>
+                        <option value="name">Name: A-Z</option>
+                    </select>
+                </div>
+            </div>
+        </aside>
+
+
+        <section class="main-content">
+            <div class="search-bar">
+                <input type="text" id="searchInput" autocomplete="off" placeholder="Search by name, brand, or category..." size="50">
+                <button onclick="applyFilters()">Search</button>
+            </div>
+
+
+            <div class="results-info">
+                <p>Showing <span id="productCount">0</span> products</p>
+            </div>
+
+
+            <div id="productsContainer" class="products-grid">
+                <!-- Products will be inserted here by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Tech Haven. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
