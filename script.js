@@ -1,5 +1,5 @@
 let products;
-async function loadProducts() { products = await (await fetch("/products.json")).json(); }
+async function loadProducts() { products = await (await fetch("/wm-tech-haven-electronics-store/products.json")).json(); }
 
 /**
  * 
